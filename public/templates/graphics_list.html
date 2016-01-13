@@ -1,0 +1,10 @@
+<ion-view ng-init="list()">
+    <ion-content >
+        <div>Please Select Graphics Folder!</div>
+        <div class="list">
+            <div ng-repeat="name in folderList" class="item"  ng-click="select(name)">
+                {{name}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

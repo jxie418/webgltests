@@ -1,0 +1,44 @@
+<ion-view>
+    <ion-content>
+        <div style="background-size: 100% auto;" class="isReady"  id="loading"  ng-if="!isReady">
+            <progress id="progressbar" value="{{progressValue}}" max="{{progressMaxValue}}"></progress>
+        </div>
+        <div id="AudaViewport"></div>
+       <div id="busy" ng-show="isBusy" data-html2canvas-ignore="true">
+           <div align="center" class="waitingText"><b>Please Wait...</b></div>
+       </div>
+
+       <div id="buttons" class="isReady" ng-if="isReady">
+           <div  class="lg-dent-btn" ng-hide="heatMapBtnActive"  ng-class="{active:dentLgBtnActive}" ng-click="lgDentClick()"></div>
+           <div  class="sm-dent-btn" ng-hide="heatMapBtnActive" ng-class="{active:dentSmBtnActive}" ng-click="sgDentClick()"></div>
+           <div  class="scratch-btn" ng-hide="heatMapBtnActive" ng-class="{active:scratchBtnActive}" ng-click="scratchClick()"></div>
+
+           <div  class="heat-map-btn" ng-show="params.heat" ng-class="{active:heatMapBtnActive}" ng-click="heatMapClick()"></div>
+           <div  class="paint-btn"    ng-hide="!params.paint || heatMapBtnActive" ng-class="{active:paintBtnActive}" ng-click="paintClick()"></div>
+
+           <div  class="undo-btn"   ng-hide="!params.undo || heatMapBtnActive" ng-click="undoClick()"></div>
+           <div  class="redo-btn"  ng-hide="!params.undo || heatMapBtnActive" ng-click="redoClick()"></div>
+           <div  class="reset-btn" ng-hide="heatMapBtnActive" ng-click="resetClick()"></div>
+
+           <div  class="back-btn" ng-click="backClick()"></div>
+           <div  class="cancel-btn" ng-hide="!params.showCancel || paintBtnActive" ng-click="cancelClick()"></div>
+           <div  class="next-btn" ng-click="nextClick()"></div>
+
+
+           <div id="toolBar" ng-show="paintBtnActive">
+               <div class="colorButton" ng-repeat ="color in PaintColors" style="background:{{color}}" ng-click="colorButtonClick(color)"></div>
+           </div>
+           <div class="helper-btn"  id="helpButton" ng-click="helpClick()"></div>
+       </div>
+       <div class="modal fade" id="helpDialog"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+           <div class="modal-dialog" role="document">
+               <div class="help">
+                   <img src="images/help-complete.png">
+               </div>
+               <div>
+                   <a data-dismiss="modal" style="display:block;min-height:100%; width:100%; background:none; z-index:200; position:absolute;"></a>
+               </div>
+           </div>
+       </div>
+    </ion-content>
+</ion-view>

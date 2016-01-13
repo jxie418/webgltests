@@ -1,0 +1,165 @@
+.lg-dent-btn {
+    position : absolute;
+    width :9%;
+    height : 16%;
+    left : 1%;
+    top : 2%;
+    background-image: url('../images/btn-dent-lg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+.lg-dent-btn.active{
+    @extend .lg-dent-btn;
+    background-image: url('../images/btn-dent-large-active.png'),url('../images/btn-dent-lg.png');
+}
+.sm-dent-btn {
+    background-image: url('../images/btn-dent-sm.png');
+    position : absolute;
+    width :9%;
+    height : 16%;
+    left : 11%;
+    top : 2%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100%;
+
+}
+.sm-dent-btn.active{
+    @extend .sm-dent-btn;
+    background-image: url('../images/btn-dent-small-active.png'), url('../images/btn-dent-sm.png');
+}
+.scratch-btn{
+    position : absolute;
+    width :9%;
+    height : 16%;
+    left : 21%;
+    top : 2%;
+    background-image: url('../images/btn-scratch.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+.scratch-btn.active{
+    @extend .scratch-btn;
+    background-image: url('../images/btn-scratch-active.png'), url('../images/btn-scratch.png');
+}
+.helper-btn{
+    position : absolute;
+    width :9%;
+    height : 16%;
+    right : 1%;
+    top : 2%;
+    background-image: url('../images/btn-help.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+    cursor: pointer;
+}
+.heat-map-btn{
+    position : absolute;
+    width :9%;
+    height : 16%;
+    left : 31%;
+    top : 2%;
+    background-image: url('../images/btn-heatmap.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+.heat-map-btn.active{
+    @extend .heat-map-btn;
+    background-image: url('../images/btn-heatmap-active.png'), url('../images/btn-heatmap.png');
+}
+.paint-btn{
+     position : absolute;
+     width :9%;
+     height : 16%;
+     left : 41%;
+     top : 2%;
+     background-image: url('../images/btn-paint.png');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size:100% ;
+}
+.paint-btn.active{
+    @extend .heat-map-btn;
+    background-image: url('../images/btn-paint-active.png'),url('../images/btn-paint.png');
+}
+.undo-btn{
+    position : absolute;
+    width :9%;
+    height : 16%;
+    right : 31%;
+    top : 2%;
+    background-image: url('../images/btn-undo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+.redo-btn{
+    position : absolute;
+    width :9%;
+    height : 16%;
+    right : 21%;
+    top : 2%;
+    background-image: url('../images/btn-redo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+.reset-btn{
+    position : absolute;
+    width :9%;
+    height : 16%;
+    right : 11%;
+    top : 2%;
+    background-image: url('../images/btn-reset.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+.back-btn{
+    position : absolute;
+    width :15%;
+    height : 19%;
+    left : 1%;
+    bottom : 0%;
+    background-image: url('../images/btn-back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+    z-index: 3;
+}
+.next-btn{
+    position : absolute;
+    width :15%;
+    height : 19%;
+    right : 1%;
+    bottom : 0%;
+    background-image: url('../images/btn-next.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+    z-index: 3;
+}
+.cancel-btn{
+    position : absolute;
+    width :15%;
+    height : 19%;
+    left : 42.5%;
+    bottom : 0%;
+    background-image: url('../images/cancel-btn.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:100% ;
+}
+
+.ng-enter {
+    animation: scaleUp 0.5s both ease-in;
+    z-index: 8888;
+}
+.ng-leave{
+    animation: slideOutLeft 0.5s both ease-in;
+    z-index: 9999;
+}
